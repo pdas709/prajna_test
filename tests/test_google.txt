@@ -1,0 +1,34 @@
+import pytest
+from selenium.webdriver import Chrome
+from selenium.webdriver.common.keys import Keys
+from pages.home_page_object import HomePageObjectClass
+from pages.results_page_object import ResultsPageObjectClass
+import time
+
+def test_google_search(browser):
+  # Set up some test case data
+  home_page = HomePageObjectClass(browser)
+  home_page.load()
+  time.sleep(2)
+  #home_page.feellucky()
+  home_page.searchtext()
+  home_page.searchbutton()
+  time.sleep(5)
+
+  Results_page = ResultsPageObjectClass(browser)
+
+  txt_of_result = Results_page.result_text()
+  assert "They are usually tied to an occupation," in txt_of_result  , f"Test Failed: Result text did not match."
+
+ 
+  '''URL = 'https://www.google.com'
+  # Navigate to the DuckDuckGo home page
+  browser.get(URL)
+
+  assert browser.title == "Google"
+  time.sleep(5)
+
+  search_field = browser.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input')
+  search_field.click()
+  search_field.send_keys('Football' + Keys.ENTER)
+  time.sleep(5)'''
