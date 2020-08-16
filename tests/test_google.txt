@@ -9,11 +9,12 @@ def test_google_search(browser):
   # Set up some test case data
   home_page = HomePageObjectClass(browser)
   home_page.load()
-  time.sleep(2)
+  time.sleep(5)
   #home_page.feellucky()
   home_page.searchtext()
   home_page.searchbutton()
-  time.sleep(5)
+  time.sleep(10)
+
 
   Results_page = ResultsPageObjectClass(browser)
 
@@ -32,3 +33,5 @@ def test_google_search(browser):
   search_field.click()
   search_field.send_keys('Football' + Keys.ENTER)
   time.sleep(5)'''
+
+  comment "google test"

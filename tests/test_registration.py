@@ -15,12 +15,17 @@ def test_google_search(browser):
   home_page.click_submit()
   
 
+
+
+
+
   
  
   '''URL = 'https://www.google.com'
   # Navigate to the DuckDuckGo home page
   browser.get(URL)
-
+  time.sleep(10)
+//verifying the title
   assert browser.title == "Google"
   time.sleep(5)
 
