@@ -10,7 +10,7 @@ def test_google_search(browser):
   home_page = HomePageObjectClass(browser)
   home_page.load()
   time.sleep(5)
-  #home_page.feellucky()
+  home_page.feellucky()
   home_page.searchtext()
   home_page.searchbutton()
   time.sleep(10)
@@ -29,8 +29,8 @@ def test_google_search(browser):
   //assert browser.title == "Google"
   //time.sleep(5)
 
-  search_field = browser.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input')
-  search_field.click()
+  //search_field = browser.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input')
+  //search_field.click()
   search_field.send_keys('Football' + Keys.ENTER)
   time.sleep(5)'''
 
